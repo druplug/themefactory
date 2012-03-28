@@ -20,3 +20,37 @@ ul.secondary-menu {
   margin: 0;
   padding: 0;
 }
+
+.box {
+    background-color: #D5E9F2;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align: bottom;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#header {
+    height: 100px;
+}
+
+#masthead {
+    height: 250px;
+}
+
+#content {
+    height: 500px;
+}
+
+#sidebar {
+    height: 770px;
+}
+
+#footer {
+    height: 100px;
+}
+
+#footer_bottom {
+    height: 100px;
+}

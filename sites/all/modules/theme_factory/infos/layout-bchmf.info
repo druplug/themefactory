@@ -1,0 +1,19 @@
+name = Layout1
+core = 7.x
+engine = phptemplate
+
+; Stylesheets. Anything within the "framework" folder will be placed before all others.
+stylesheets[all][] = styles/framework/reset.css
+stylesheets[all][] = styles/framework/text.css
+stylesheets[all][] = styles/framework/960.css
+stylesheets[all][] = styles/framework/debug.css
+
+; Theme specific styles. Any sub-themes should override this.
+stylesheets[all][] = styles/styles.css
+
+regions[header]         = Header
+regions[masthead]       = Masthead
+regions[content]        = Content
+regions[sidebar]        = sidebar
+regions[footer]         = Footer
+regions[footer_bottom]  = Footer bottom

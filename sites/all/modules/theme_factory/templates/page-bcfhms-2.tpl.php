@@ -6,12 +6,12 @@
         <?php print render($page['header']); ?>
         header
     </div>
-    <div id="main-content" class="<?php print ns('grid-16', $page['sidebar_first'], 4); ?>  <?php print ns('push-4', !$page['sidebar_first'], 4); ?>">
-        <div id="masthead" class="alpha <?php print ns('grid-16', $page['sidebar_first'], 4); ?> box omega">
+    <div id="main-content" class="grid-12">
+        <div id="masthead" class="alpha grid-12 box omega">
             <?php print render($page['masthead']); ?>
             masthead
         </div>
-        <div id="main" class="alpha <?php print ns('grid-16', $page['sidebar_first'], 4); ?> box omega">
+        <div id="main" class="alpha grid-12 box omega">
             <div id="content" class="region clearfix">
                 <?php print render($page['content']); ?>
                 content
@@ -19,11 +19,10 @@
         </div>
     </div>
 
-    <?php if ($page['sidebar_first']): ?>
-        <div id="sidebar" class="grid-4 box pull-12">
-            <?php print render($page['sidebar_first']); ?>
-        </div>
-    <?php endif; ?>
+    <div id="sidebar" class="grid-4 box">
+        <?php print render($page['sidebar']); ?>
+        sidebar
+    </div>
 
     <div id="footer" class="grid-16 box">
         <?php print render($page['footer']); ?>
