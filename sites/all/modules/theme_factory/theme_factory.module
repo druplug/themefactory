@@ -1,0 +1,63 @@
+<?php
+
+
+function test_menu() {
+  $items = array();
+  $items['theme_factory/generate'] = array(
+    'title' => t('Theme Factory'),
+    'page callback' => 'factory',
+    'access arguments' => array('access content'),
+    'description' => t('Theme Factory'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+
+function factory() {
+  return drupal_get_form('test_my_form');
+}
+
+function test_my_form($form_state) {
+
+// This is the first form element. It's a textfield with a label, "Name"
+   $form['card'] = array(
+    '#type' => 'radios',
+    '#title' => t('Type'),
+     '#options' => array(
+       "layout1" => t('<strong>Layout #1</strong>') . '<div class="layout-example layout-1"><div class="secondary-region"></div><div class="primary-region">1</div><div class="tertiary-region"></div></div>' . t('<p class="layout-type")>Three column layout with secondary on the left and tertiary on the right of the main content area.</p>'),
+      "layout2" => t('<strong>Layout #2</strong>') . '<div class="layout-example layout-2"><div class="tertiary-region"></div><div class="primary-region">2</div><div class="secondary-region"></div></div>' . t('<p class="layout-type")>Three column layout with tertiary on the left and secondary on the right of the main content area.</p>'),
+      "layout3" => t('<strong>Layout #3</strong>') . '<div class="layout-example layout-3"><div class="primary-region">3</div><div class="secondary-region"></div><div class="tertiary-region"></div></div>' . t('<p class="layout-type")>Three column layout with secondary and tertiary to the right of the main content area.</p>'),
+      "layout4" => t('<strong>Layout #4</strong>') . '<div class="layout-example layout-4"><div class="primary-region">4</div><div class="tertiary-region"></div><div class="secondary-region"></div></div>' . t('<p class="layout-type")>Three column layout with tertiary and secondary to the right of the main content area.</p>'),
+      "layout5" => t('<strong>Layout #5</strong>') . '<div class="layout-example layout-5"><div class="secondary-region"></div><div class="tertiary-region"></div><div class="primary-region">5</div></div>' . t('<p class="layout-type")>Three column layout with secondary and tertiary on the left of the main content area.</p>'),
+      "layout6" => t('<strong>Layout #6</strong>') . '<div class="layout-example layout-6"><div class="tertiary-region"></div><div class="secondary-region"></div><div class="primary-region">6</div></div>' . t('<p class="layout-type")>Three column layout with tertiary and secondary on the left of the main content area.</p>'),
+      "layout7" => t('<strong>Layout #7</strong>') . '<div class="layout-example layout-7"><div class="primary-region">7</div><div class="secondary-region"></div><div class="tertiary-region"></div></div>' . t('<p class="layout-type")>Secondary and tertiary as two columns below main content area.</p>')
+     ),
+     '#required' => TRUE,
+  );
+  
+  $form['opts'] = array(
+    '#type' => 'select',
+    '#title' => t('Options'),
+    '#options' => array(t('citi_op1'), t('citi_op2')),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#states' => array(
+      'visible'=> array(
+      ':input[name="card"]' => array('value' => 'citi'),
+      ),
+      ),
+    );
+  
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Submit',
+  );
+  return $form;
+}
+
+function test_my_form_submit($form, &$form_state) {
+    drupal_set_message(t('The form has been submitted.'));
+}
+
+?>
