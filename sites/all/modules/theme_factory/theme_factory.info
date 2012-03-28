@@ -1,0 +1,3 @@
+name = Theme factory
+description = Starting point for Drupal 7 themes
+core = 7.x
