@@ -1,5 +1,4 @@
 <?php
-// $Id: template.php,v 1.1.2.6.4.2 2011/01/11 01:08:49 dvessel Exp $
 
 /**
  * The default group for NineSixty framework CSS files added to the page.
@@ -9,14 +8,14 @@ define('CSS_NS_FRAMEWORK', -200);
 /**
  * Implements hook_preprocess_html
  */
-function ninesixty_preprocess_html(&$vars) {
+function <THEME>_preprocess_html(&$vars) {
   $vars['classes_array'][] = 'show-grid';
 }
 
 /**
  * Preprocessor for page.tpl.php template file.
  */
-function ninesixty_preprocess_page(&$vars, $hook) {
+function <THEME>_preprocess_page(&$vars, $hook) {
 
   // For easy printing of variables.
   $vars['logo_img'] = '';
@@ -132,7 +131,7 @@ function ns() {
  * the same name as a framework style. This mirrors the behavior of the 6--1
  * release of NineSixty warts and all. Future versions will make this obsolete.
  */
-function ninesixty_css_alter(&$css) {
+function <THEME>_css_alter(&$css) {
   global $theme_info, $base_theme_info;
 
   // Dig into the framework .info data.

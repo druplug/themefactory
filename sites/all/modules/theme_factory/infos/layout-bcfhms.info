@@ -1,4 +1,5 @@
-name = Layout1
+name = <THEME>
+description = <DESCRIPTION>
 core = 7.x
 engine = phptemplate
 
