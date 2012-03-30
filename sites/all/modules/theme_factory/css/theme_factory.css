@@ -58,3 +58,19 @@
   height: 122px;
   margin-left: 72px;
 }
+
+/* fonts */
+#bree-serif {
+  font-family: 'Bree Serif', serif;
+}
+
+#open-sans {
+  font-family: 'Open Sans', sans-serif;    
+}
+
+.webfont {
+  font-size: 16px;
+  color: #0072b9;
+  background: #fafafa;
+  padding: 20px;
+}

@@ -10,6 +10,7 @@ define('CSS_NS_FRAMEWORK', -200);
  */
 function <THEME>_preprocess_html(&$vars) {
   $vars['classes_array'][] = 'show-grid';
+  <GOOGLE-FONT>
 }
 
 /**
