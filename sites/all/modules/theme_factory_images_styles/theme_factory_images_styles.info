@@ -1,0 +1,8 @@
+name = "Theme factory images styles"
+description = "Image styles used in Theme factory"
+core = "7.x"
+package = "Features"
+version = "7.x-1.0"
+project = "theme_factory_images_styles"
+dependencies[] = "image"
+features[image][] = "100x300"

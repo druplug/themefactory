@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Theme factory content types feature.
+ */
+
+include_once('theme_factory_content_types.features.inc');

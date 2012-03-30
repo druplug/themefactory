@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Theme factory images styles feature.
+ */
+
+include_once('theme_factory_images_styles.features.inc');

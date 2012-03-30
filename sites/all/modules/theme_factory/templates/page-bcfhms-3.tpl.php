@@ -25,12 +25,18 @@
         </div>
     <?php endif; ?>
 
-    <div id="footer" class="grid-16 box">
-        <?php print render($page['footer']); ?>
-        footer
-    </div>
-    <div id="footer_bottom" class="grid-16 box">
-        <?php print render($page['footer_bottom']); ?>
-        footer bottom
-    </div>
+    <?php if ($page['footer']): ?>
+        <div id="footer" class="grid-16 box">
+            <?php print render($page['footer']); ?>
+            footer
+        </div>
+    <?php endif; ?>
+
+    <?php if ($page['footer_bottom']): ?>
+        <div id="footer_bottom" class="grid-16 box">
+            <?php print render($page['footer_bottom']); ?>
+            footer bottom
+        </div>
+    <?php endif; ?>
+
 </div>
